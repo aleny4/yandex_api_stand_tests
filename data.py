@@ -2,11 +2,20 @@ headers = {
     "Content-Type": "application/json"
 }
 
+kit_headers = {
+    "Content-Type": "application/json",
+    "Authorization": ""
+}
+
 user_body = {
-    "firstName": "Анатолий",
-    "phone": "+79995553322",
+    "firstName": "Алёна",
+    "phone": "+79998887766",
     "address": "г. Москва, ул. Пушкина, д. 10"
 }
-product_ids = {
-    "ids": [1, 2, 3]
+
+kit_body = {
+    "name": "1"
+}
+
+empty_body = {
 }
