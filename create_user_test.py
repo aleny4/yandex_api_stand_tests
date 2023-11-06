@@ -5,7 +5,7 @@ import data
 
 # создание пользователя с получением токена
 def get_token():
-    user_response = sender_stand_request.post_new_user(data.user_body)
+    user_response = sender_stand_request.post_new_user(user_body)
     return user_response.json()["authToken"]
 
 # получение тела запроса в создании набора
