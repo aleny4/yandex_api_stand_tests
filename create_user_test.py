@@ -71,7 +71,7 @@ def test_create_kit_russian_letter_in_name_get_positive_response():
 
 # Тест 7. Разрешены спецсимволы
 def test_create_kit_special_symbol_in_name_get_positive_response():
-    positive_assert(""№%@",")
+    positive_assert("\"№%@\",")
 
 # Тест 8. Разрешены пробелы
 def test_create_kit_whitespace_in_name_get_positive_response():
@@ -82,7 +82,7 @@ def test_create_kit_numbers_in_name_get_positive_response():
     positive_assert("123")
 
 # Тест 10. Параметр не передан в запросе
-def test_create_kit_no_name_get_negative_response():
+def test_create_kit_no_name_get_negative_assert():
     token = get_token()
     kit_body = get_empty_kit_body()
     response = sender_stand_request.post_new_kit(kit_body, token)
@@ -92,5 +92,3 @@ def test_create_kit_no_name_get_negative_response():
 # Тест 11. Передан другой тип параметра (число)
 def test_create_kit_number_type_name_get_negative_response():
     negative_assert_code_400(123)
-    # проверяем, что код ответа 400
-    assert response.status_code == 400
